@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Para Lanna Lívia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <main class="app-container">
+
+    <header class="hero-header">
+      <div class="badge-tag">
+        <span>16.06.2024</span>
+      </div>
+      <h1 class="hero-title">Para Lanna Lívia</h1>
+      <p class="hero-subtitle">"Cada segundo ao seu lado é o meu momento favorito."</p>
+    </header>
+
+    <section id="tempo" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <h2>Juntos Há</h2>
+      </div>
+
+      <div class="counter-grid">
+        <div class="glass-card counter-card">
+          <span class="counter-value" id="days">0</span>
+          <span class="counter-label">Dias</span>
+        </div>
+        <div class="glass-card counter-card">
+          <span class="counter-value" id="hours">0</span>
+          <span class="counter-label">Horas</span>
+        </div>
+        <div class="glass-card counter-card">
+          <span class="counter-value" id="minutes">0</span>
+          <span class="counter-label">Minutos</span>
+        </div>
+        <div class="glass-card counter-card">
+          <span class="counter-value" id="seconds">0</span>
+          <span class="counter-label">Segundos</span>
+        </div>
+      </div>
+
+      <p class="counter-quote">
+        Desde 16 de Junho de 2024 reescrevendo o meu mundo ao seu lado.
+      </p>
+    </section>
+
+    <section id="fotos" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </span>
+        <h2>Nossas Memórias</h2>
+      </div>
+
+      <div class="glass-card photo-carousel-container">
+        <div class="carousel-viewport" id="photoViewport">
+          <div class="carousel-track" id="photoTrack">
+            <div class="photo-slide">
+              <div class="photo-wrapper">
+                <img src="images/foto1.jpg" alt="Memória 1" loading="lazy">
+                <div class="photo-caption">Sorrisos que iluminam meus dias</div>
+              </div>
+            </div>
+            <div class="photo-slide">
+              <div class="photo-wrapper">
+                <img src="images/foto2.jpg" alt="Memória 2" loading="lazy">
+                <div class="photo-caption">Cada detalhe nosso é inesquecível</div>
+              </div>
+            </div>
+            <div class="photo-slide">
+              <div class="photo-wrapper">
+                <img src="images/foto3.jpg" alt="Memória 3" loading="lazy">
+                <div class="photo-caption">A certeza do meu pra sempre</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-arrow prev" id="photoPrevBtn" aria-label="Foto Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-arrow next" id="photoNextBtn" aria-label="Próxima Foto">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="carousel-dots" id="photoDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="musicas" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </span>
+        <h2>Trilha Sonora</h2>
+      </div>
+
+      <div class="glass-card music-carousel-card">
+        <div class="music-carousel-viewport" id="musicViewport">
+          <div class="music-carousel-track" id="musicTrack">
+
+            <div class="music-slide" data-index="0">
+              <div class="song-card-content">
+                <div class="song-cover-box">
+                  <img src="images/domingodemanha.jpg" alt="Capa Domingo de Manhã" class="song-cover-img">
+                  <button class="play-overlay-btn" onclick="playSongIndex(0)" aria-label="Tocar Domingo de Manhã">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                </div>
+                <div class="song-info">
+                  <h3 class="song-title">Domingo de Manhã</h3>
+                  <p class="song-artist">Marcos & Belutti</p>
+                  <span class="song-duration-badge">4:11</span>
+                </div>
+
+                <div class="lyrics-excerpt-card">
+                  <span class="excerpt-tag">Trecho Especial</span>
+                  <p class="excerpt-text">
+                    "Mas eu, eu, eu<br>
+                    Prefiro estar aqui te perturbando<br>
+                    Domingo de manhã<br>
+                    É que eu prefiro ouvir sua voz de sono"
+                  </p>
+                </div>
+
+                <button class="btn-secondary" onclick="openLyricsModal(0)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  Ver Trecho / Letra
+                </button>
+              </div>
+            </div>
+
+            <div class="music-slide" data-index="1">
+              <div class="song-card-content">
+                <div class="song-cover-box">
+                  <img src="images/querida.jpg" alt="Capa Querida" class="song-cover-img">
+                  <button class="play-overlay-btn" onclick="playSongIndex(1)" aria-label="Tocar Querida">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                </div>
+                <div class="song-info">
+                  <h3 class="song-title">Querida</h3>
+                  <p class="song-artist">Chapéu de Palha (Duo)</p>
+                  <span class="song-duration-badge">3:37</span>
+                </div>
+
+                <div class="lyrics-excerpt-card">
+                  <span class="excerpt-tag">Trecho Especial</span>
+                  <p class="excerpt-text">
+                    "Querida, eu não consigo em palavras dizer o que eu sinto por você<br>
+                    Mas é mais do que eu posso, menos do que eu queria<br>
+                    Querida, eu não consigo em palavras dizer o que eu sinto por você<br>
+                    Mas é mais do que eu posso, menos do que eu queria"
+                  </p>
+                </div>
+
+                <button class="btn-secondary" onclick="openLyricsModal(1)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  Ver Trecho / Letra
+                </button>
+              </div>
+            </div>
+
+            <div class="music-slide" data-index="2">
+              <div class="song-card-content">
+                <div class="song-cover-box">
+                  <img src="images/oqueequetem.jpg" alt="Capa O Que É Que Tem?" class="song-cover-img">
+                  <button class="play-overlay-btn" onclick="playSongIndex(2)" aria-label="Tocar O Que É Que Tem">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                </div>
+                <div class="song-info">
+                  <h3 class="song-title">O Que É Que Tem?</h3>
+                  <p class="song-artist">Jorge & Mateus</p>
+                  <span class="song-duration-badge">3:31</span>
+                </div>
+
+                <div class="lyrics-excerpt-card">
+                  <span class="excerpt-tag">Trecho Especial</span>
+                  <p class="excerpt-text">
+                    "Deixa o povo falar<br>
+                    O que é que tem?<br>
+                    Eu quero ser lembrado com você<br>
+                    Isso não é problema de ninguém"
+                  </p>
+                </div>
+
+                <button class="btn-secondary" onclick="openLyricsModal(2)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  Ver Trecho / Letra
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-arrow prev" id="musicPrevBtn" aria-label="Música Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-arrow next" id="musicNextBtn" aria-label="Próxima Música">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="carousel-dots" id="musicDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+
+      <div class="glass-card player-widget">
+        <div class="player-mini-info">
+          <img src="images/domingodemanha.png" id="playerThumb" alt="Capa Ativa" class="player-thumb-img">
+          <div class="player-text-details">
+            <h4 id="playerTitle" class="player-title">Domingo de Manhã</h4>
+            <p id="playerArtist" class="player-artist">Marcos & Belutti</p>
+          </div>
+        </div>
+
+        <div class="progress-area" id="progressArea">
+          <div class="progress-bar-bg" id="progressBarBg">
+            <div class="progress-bar-fill" id="progressFill"></div>
+            <div class="progress-handle" id="progressHandle"></div>
+          </div>
+          <div class="time-display">
+            <span id="currentTime">0:00</span>
+            <span id="totalDuration">4:11</span>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="ctrl-btn" id="prevBtn" aria-label="Música Anterior">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+          
+          <button class="ctrl-btn play-btn" id="playPauseBtn" aria-label="Reproduzir ou Pausar">
+            <svg id="playIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <svg id="pauseIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          
+          <button class="ctrl-btn" id="nextBtn" aria-label="Próxima Música">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <audio id="audioPlayer" preload="metadata"></audio>
+    </section>
+
+    <section id="carta" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <h2>Cartinha de Amor</h2>
+      </div>
+
+      <article class="glass-card letter-card">
+        <div class="letter-seal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+
+        <h3 class="letter-salutation">Lanna Lívia,</h3>
+
+        <div class="letter-body">
+          <p>Com você tudo ganhou mais sentido. Olhar para nossos momentos juntos me faz ter a certeza de que você é a minha melhor escolha pra sempre.</p>
+
+          <p>Estar ao seu lado é encontrar paz nos dias corridos, rir sem motivo e ter a certeza de que a vida é muito melhor compartilhada com você.</p>
+
+          <p>Por um breve momento desistimos um do outro, mas como sempre diziamos: <em>"O que Deus uniu, ninguém separa" - Mateus 19:06</em>. Então muito obrigado por ter voltado pra mim mesmo depois de tantos erros que cometi.</p>
+
+          <p>Sei que sou falho e tenho muito a corrigir, mas eu preciso e quero te mostrar que mudei, então pensando nisso, fiz esse espaço que é apenas uma pequena lembrança do meu carinho por você.</p>
+        </div>
+
+        <div class="letter-signature">
+          <span>Com todo o meu amor,</span>
+          <strong>Kauã Rodrigues de Sousa Santos</strong>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <div class="modal-backdrop" id="lyricsModal" aria-hidden="true">
+    <div class="modal-card glass-card">
+      <button class="modal-close-btn" onclick="closeLyricsModal()" aria-label="Fechar Modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">Trecho Selecionado</span>
+        <h3 class="modal-song-title" id="modalSongTitle">Título da Música</h3>
+        <p class="modal-song-artist" id="modalSongArtist">Artista</p>
+      </div>
+      <div class="modal-body" id="modalLyricsContent">
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="#tempo" class="nav-item active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Tempo</span>
+    </a>
+    <a href="#fotos" class="nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span>Fotos</span>
+    </a>
+    <a href="#musicas" class="nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <span>Músicas</span>
+    </a>
+    <a href="#carta" class="nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Carta</span>
+    </a>
+  </nav>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
